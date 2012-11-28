@@ -1,0 +1,2 @@
+R3AAM
+Rails3 Authentication and Authorization with Mongoid
