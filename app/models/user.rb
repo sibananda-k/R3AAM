@@ -15,7 +15,7 @@ class User
   validates_presence_of :name
   validates_presence_of :encrypted_password
   validates_uniqueness_of :name, :email, :case_sensitive => false
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  
   
   ## Recoverable
   field :reset_password_token,   :type => String
@@ -30,7 +30,7 @@ class User
   field :last_sign_in_at,    :type => Time
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
-
+  
   ## Confirmable
   # field :confirmation_token,   :type => String
   # field :confirmed_at,         :type => Time
@@ -44,4 +44,11 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :role_ids, :as => :admin
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  
 end
