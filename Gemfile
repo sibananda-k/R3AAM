@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem "heroku"
+
 
 gem 'rails', '3.2.9'
 
@@ -56,3 +56,5 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 group :production do
   gem 'thin'
 end
+
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
